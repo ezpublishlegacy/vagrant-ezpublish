@@ -19,7 +19,7 @@ sudo apt-get -y install mysql-server
 
 #sudo mysqladmin -u root root secretroot
 
-sudo apt-get install -y mysql-client php5-mysql pdo-mysql
+sudo apt-get install -y mysql-client php5-mysql
 
 # configuring apache
 sudo /etc/init.d/apache2 stop
