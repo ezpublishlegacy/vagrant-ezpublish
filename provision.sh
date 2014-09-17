@@ -45,7 +45,7 @@ sudo cat <<EOT >/vagrant/blog_conf
         # for Apache 2.2 and earlier:
         #Allow from all
         # for Apache 2.4:
-        #Require all granted
+        Require all granted
     </Directory>
 
     # Environment.
@@ -213,11 +213,6 @@ sudo /etc/init.d/apache2 restart
 # Configuring les acces au fichier de application pour user cli et web
 sudo usermod -g vagrant vagrant
 
-
-if [ `grep -c "umask 0002" /home/vagrant/.bashrc` -eq 0 ]
-then
-    echo "umask 0002" >>/home/vagrant/.bashrc
-fi
 
 # configure project
 cd /vagrant/ezpublish-community
